@@ -31,6 +31,12 @@ nav ul li {
     list-style: none;                           /*list-style ko remove krne k liye jo bullets hote hain */
     margin: 0 23px;                             /* nav ke items ke beech space create krne k liye jaise home contact ke beech*/
 }
+main hr {                                        /* main ke under jo hr ka style set krne k liye i.e 1st horz line */
+    border : 0 ;
+    background : #9c97f1;
+    height : 1px ;
+    margin : 40px 84px; 
+}
 .left{ 
     font-size: 25px ;                           /* nav ke left side ke text ka size set krne k liye */
 }
@@ -38,7 +44,7 @@ nav ul li {
     display: flex;
     justify-content: space-around;
     height: 23px 0;                                 /* first section ke height ko set krne k liye */
-    margin : 50px 0;
+    margin : 150px 0;
     align-items: center;
 }
 .firstsecrion >div{
@@ -56,4 +62,28 @@ nav ul li {
 }
 .purple{
     color : rgb(217, 79, 217)
+}
+.graytext {
+    color: #9c97f1;
+}
+.secondsection {
+     max-width: 1000px;
+     margin: 0 auto;
+     height: 500px;
+}
+.secondsection h1 {
+    font-size: 1.9rem;
+}
+.secondsection .box {                    /* box ke liye style set krne k liye i.e. jo second horizontal line hai uske liye*/
+    width: 80vw;
+    height: 1.3px;
+    background : white;
+    margin: 56px 0;
+    display: flex;                   /* box ke under jo horizontal line hai uske liye usko vertically alag dikhane ke liye */
+}
+.secondsection .vertical {          /* vertical ke liye style set krne k liye i.e. jo second horizontal line ke beech me vertical line hai uske liye */
+    height : 93px ;
+    width : 1px ;
+    background-color : white ;
+    margin : 0 100px ;
 }
