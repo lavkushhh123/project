@@ -75,7 +75,7 @@ main hr {                                        /* main ke under jo hr ka style
     font-size: 1.9rem;
 }
 .secondsection .box {                    /* box ke liye style set krne k liye i.e. jo second horizontal line hai uske liye*/
-    width: 80vw;
+    width: 70vw;
     height: 1.3px;
     background : white;
     margin: 56px 0;
@@ -85,5 +85,31 @@ main hr {                                        /* main ke under jo hr ka style
     height : 93px ;
     width : 1px ;
     background-color : white ;
-    margin : 0 100px ;
+    margin : 0 110px ;                   /* vertical line ke beech me jo content hai uske beech me spacing ke liye*/ 
+}
+.image-top{
+    width: 50px;
+    position: relative;
+    top: -50px;
+    left: -11px;
+}
+.vertical-title {
+ position: relative;
+ top: 50px;
+ width: 150px;
+}
+.vertical-desc{
+  position: relative;
+  color: gray;
+  width: 150px;
+  font-size: 12px;
+  top: 60px;
+}
+footer{
+    background-color: rgb(7, 7, 29);
+    height: 240px;
+}
+.footer {
+    display: flex ;
+  padding: 30px 50px;
 }
