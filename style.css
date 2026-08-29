@@ -322,21 +322,80 @@ box-shadow:
         margin-bottom: 8px;      /* project name*/
         color: cyan;
     } 
-    .project :hover{
+    .project:hover{
         transform : translateX(5px);             /* thoda right move*/
         box-shadow:0 0 15px rgba(0, 255, 255, 0.4) ;      /* gllow thoda increase karega*/ 
-    }   
-#contact {
-    text-align: center;
+    }  
+    #contact {
+        padding : 50px 20px ;         /*contact section ke andar space*/
+        text-align: center;
+    }
+    #contact h2{
+        margin-bottom: 30px;   /*space below heading*/
+    }
+    #contact form{
+        max-width: 500px;      /* fom ki max width*/
+        margin: auto;          /*form ko cemter me rkhega*/
+        padding : 25px;         /*form ke andar space*/
+        border: 1px solid cyan;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03)    /* for dark backkground */
+    }
+
+    #contact input , 
+    #contact textarea {
+        width : 100%;                 /*ip width*/
+        padding: 12px;                  /* b0x ke andar space*/
+        margin-bottom: 15px;         /*neechge gsp*/
+        border: 1px solid rgb(217, 79, 217);
+        border-radius: 6px;
+        background: #0c0c25;
+        color: white ;
+        box-sizing: border-box;       /* box size ko proper rakhta hai*/
+        font-size: 15px;
+    }
+
+    #contact textarea{          /* mesage box kim height*/
+        height: 120px;
+        resize: vertical;                   /* to resize vertical*/
+        box-shadow: 0 0 6px cyan;
+        outline : none ;
+    }
+
+    #contact button {
+        padding: 10px 20px;
+        border: 2px solid rgb(14, 220, 113);
+        border-radius: 20px;
+        background: transparent;       /*color of button*/
+        color: white;
+        cursor: pointer;                 /*mouse pointer*/
+        box-shadow: rgb(14, 220, 113);
+        transition: 0.3s;                /* small hover */
+
+        }
+
+        /* button hover */
+#contact button:hover {
+            background: cyan;
+            color: #0c0c25;
+            box-shadow: 0 0 15px cyan;
+        }
+
+.contact-info{
+    margin-top: 30px;                /* space btw form and contact detail*/
 }
-#contact h2{
-    margin-bottom: 10px;
-}#contact p{
-    margin: 15px;
-}
-#contact a{
-    color: rgb(148, 144, 151);
+
+/* contact link */
+.contact-info a {
+    color: #aaa;                /* white color of link*/
     text-decoration: none;
+    transition: 0.3s;
+}
+
+/* link hover */
+
+.contact-info a:hover{
+    color: #09c642;
 }
 .secondsection {
      max-width: 1000vh;
@@ -384,5 +443,4 @@ footer{
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: center;
-}
+    align-items: cen
