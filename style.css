@@ -73,7 +73,15 @@ main hr {                                        /* main ke under jo hr ka style
     font-family: 'Times New Roman', Times, serif;
 
     position: relative;
-    z-index: 2;
+    /*z-index: 2;*/
+}
+
+/* for font style */
+.cool-look {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  height:auto;
+  letter-spacing: -1px;
 }
 
 
@@ -83,8 +91,8 @@ main hr {                                        /* main ke under jo hr ka style
     color: #ff4fd8;
 
     text-shadow:
-        0 0 5px #ff4fd8,
-        0 0 15px #ff4fd8;
+        0 0 1.5px #ff4fd8,
+        0 0 1.5px #ff4fd8;
 }
 
 
@@ -124,7 +132,7 @@ main hr {                                        /* main ke under jo hr ka style
 .buttons {
     margin-top: 35px;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .buttons button {
@@ -368,7 +376,7 @@ box-shadow:
         border-radius: 20px;
         background: transparent;       /*color of button*/
         color: white;
-        cursor: pointer;                 /*mouse pointer*/
+        cursor: pointer;                 /*hath wala pointer*/
         box-shadow: rgb(14, 220, 113);
         transition: 0.3s;                /* small hover */
 
@@ -397,44 +405,58 @@ box-shadow:
 .contact-info a:hover{
     color: #09c642;
 }
-.secondsection {
-     max-width: 1000vh;
-     margin: 0 auto;
-     height: 500px;
+
+
+#skills{
+    padding: 50px 20px;     /* skill section ke andar space*/
+    text-align: center;
+    color: #ff4fd8;
 }
-.secondsection h1 {
+#skills h{
     font-size: 1.9rem;
+    margin-bottom: 10px;   /* neeche space*/
 }
-.secondsection .box {                    /* box ke liye style set krne k liye i.e. jo second horizontal line hai uske liye*/
-    width: 150vh;
-    height: 0px;
-    background : white;
-    margin: opx 0px;
-    display: flex;                   /* box ke under jo horizontal line hai uske liye usko vertically alag dikhane ke liye */
+.skill-intro{
+    color : white ;
+    margin-top: 30px;     /* my skill aur techno ke beech ka gap*/ 
+    margin-bottom: 25px;
 }
-.secondsection .vertical {          /* vertical ke liye style set krne k liye i.e. jo second horizontal line ke beech me vertical line hai uske liye */
-    height : 93px ;
-    width : 1px ;
-    background-color : white ;
-    margin : 0 110px ;                   /* vertical line ke beech me jo content hai uske beech me spacing ke liye*/ 
+.skill-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;       /* skill dabbe me center kiya*/
+    flex-wrap: wrap;                /*screen chhoti hone pr next line*/
+
 }
-.image-top{
-    width: 50px;
-    position: relative;
-    top: -50px;
-    left: -11px;
+/* individual skill card */
+.skill-card{
+    width: 180px;
+    padding: 20px;
+    border:1px solid rgba(0, 255, 255, 0.4) ;
+    border-radius: 12px;
+    background:rgba(255, 255, 255, 0.03) ;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2) ;     /* glow of the boxes*/
+    transition: 0.3s;
 }
-.vertical-title {
- position: relative;
- top: 50px;
- width: 150px;
+
+.skill-card img{
+    width: 150px;
+    margin-bottom: 10px;
 }
-.vertical-desc{
-  position: relative;
-  color: gray;
-  width: 150px;
-  font-size: 12px;
-  top: 60px;
+.skill-card h3{
+    color: rgb(49, 221, 109);
+    margin-bottom: 6px;
+}
+.skill-card p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;          /* line spaciing*/
+}
+
+/* card hover effect */
+.skill-card:hover{
+    transform:translateY(-5px);                   /* jab arrow jaaye to thoda upar ho*/
+    box-shadow:  0 0 15px rgba(0, 255, 255, 0.4);
 }
 footer{
     background-color: rgb(7, 7, 29);
@@ -443,4 +465,5 @@ footer{
     display: flex;
     text-align: center;
     justify-content: center;
-    align-items: cen
+    align-items: center ;
+}
