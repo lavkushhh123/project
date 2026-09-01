@@ -19,12 +19,12 @@
       <nav>
         <div class="left"> Lavkush's Portfolio</div>
         <div class="right">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home"> Home </a></li>
-                <li class ="navli"><a href="#about"> About </a></li>
-                <li class ="navli"><a href="#skills"> Skills </a></li>
-                <li class="navli"><a href="#projects"> Projects </a></li>
-                <li class="navli"><a href="#contact"> Contact </a></li>
+               <li ><a href="#about"> About </a></li>
+                <li><a href="#skills"> Skills </a></li>
+                 <li><a href="#projects"> Projects </a></li>
+                 <li ><a href="#contact"> Contact </a></li>
             </ul>
         </div>
     </nav>
@@ -32,8 +32,8 @@
 
     <main>
         <section id = "home">
-        <section class="firstsection">
-            <div class="leftsection"> Hello , My Name is <span class="purple">Lavkush Nishad </span>
+        <section class ="firstsection">
+            <div class="leftsection"> Hello , My Name is Lavkush 
                 <div>I am a passionate<span style=" color: rgb(102, 218, 224);"> Web Developer <span></div>
             <div class="buttons">
                 <button > <a href="https://github.com/lavkushhh123/project.git" style ="text-decoration: none; color: white;"> View My Work </a></button>
@@ -43,24 +43,42 @@
             </div>
             <div class="rightsection"> 
                 <img src="love3.png" alt="image">
-            </div>
-            </section>
+            </d>
+        </section>
         </section>
         <!-- first  horizontal line -->
         <hr>
 
 
         <section id ="about">
-            <h2 class = "cool-look" style ="color : cyan"> About me </h2>
-            <p style="font-styl;"> Hello , myself Lavkush Nishad , I am a passionate web developer .<br> I have a keen desire to learn new emerging technology like AI and ML.
+            <h2 class="cool-look" style="color:cyan"> About me </h2>
+            <p class ="about-intro"> Hello , myself Lavkush Nishad , I am from Prayagraj UP. Currently I am pursuing b.tech in CSE with specialization in AIML form Ajay Kumar Garg Engineering College Ghaziabad . I have done my schooling from RRB Convent School Prayagraj. I would like to learn about our societies, history and geography. The nature and its true beauty really excites me. <br>I have a keen desire to learn new emerging technology like AI and ML. <br> Apart from studies I would like to :
             </p>
-            <h3 style = " font-weight: 300; font-style: normal; color: rgb(20, 255, 181);"> My hobbies are :</h3> 
+            <!-- <h3> My hobbies are :</h3>  -->
             <p>
-            <ul class = "box">
-                <li class = "box1"> Playing cricket </li>
-                <li class ="box2"> Reading novels</li>
-                <li class = "box3"> Writing </li>
-                <li class ="box4"> Showing card magic</li>
+                <div class = "hobbies-box">
+
+                <div class = "hobbies">
+                <h4> Playing cricket </h4>
+                <p></p>
+                </div>
+
+                <div class="hobbies">
+                <h4> Reading novels</h4>
+                <p></p>
+                </div>
+
+                <div class="hobbies">
+                <h4> Writing </h4>
+                <p></p>
+                </div>
+
+                <div class="hobbies">
+                <h4> Showing card magic</h4>
+                <p> </p>
+                </div>
+
+            </div>
             </ul>
             </p>
         </section>
@@ -69,44 +87,34 @@
         
         
         <section id = "projects">
-            <h2 class="cool-look" style="color: gold;" > Projects </h2>
-            <div class = "projects">
-                <img src="port.png" alt="potfoliuo website">
+            <h2 class="cool-look" style="color: aqua;" > Projects </h2>
 
-                <div class = "project-info">
+            <!-- container for all projects -->
+
+            <div class = "project-container">
+                <div class = "project-card">
                 <h3> Portfolio Website </h3>
-                <p> Responsive portfolio website using HTML and CSS</p>
-            </div>
+                <p></p>
+         </div>
 
-            </div>
-
-            <div class = "projects"> 
-                <img src="robo.png" alt ="Line follower robot">
-
-                <div class = "project-info">
+                <div class = "project-card">
                 <h3> Line Follower Robot</h3>
-                <p> Robot that follows a predefined line using IR sensor </p>
+                <p></p>
             </div>
-
-            </div>
-
-            <div class = "projects">
-                <img src="calc.png" alt="basic calculator">
-
-                <div class = "project-info">
+            
+            <div class = "project-card">
                 <h3> Basic calculator </h3>
-                <p> Basic calculator using programming concept</p>
+            <p> </p>
             </div>
 
-            </div>
-             </section>
-
+         </div>
+        </sectio>
              <!-- horizontal line3 -->
               <hr>
 
         
               <section id = "skills">
-                <h2> My skills </h2>
+                <h2 class = "cool-look"style="color: aqua;"> My skills </h2>
                 <p class = "skill-intro"> 
                     Technologies and programming skills I am learning and working with.
                 </p>
@@ -153,7 +161,7 @@
               <hr> 
 
         <section id ="contact">
-            <h2 class="look-cool" style="color: chartreuse;"> Contact Me </h2>
+            <h2 class="cool-look" style="color:cyan;"> Contact Me </h2>
 
             <!-- contact form -->
              <form>
@@ -163,12 +171,15 @@
                  <input type = "email" placeholder = " Your email">
 
                  <textarea placeholder = "Youe Message"></textarea>
-
+                <p>
                  <button type = "submit"> Send Message</button>
-
+                    </p>
              </form>
 
-             <div class = "contact-info">
+        </section>
+        </main>
+        <footer id = "footer">
+            <div class = "contact-info">
             <p> 
                 <a href="tel : +91 9696756478"> +91 9696756478 </a>
             </p>
@@ -181,12 +192,10 @@
             <p> 
                 <a href="https://github.com/lavkushhh123">Github profile</a>
             </p>
-
             </div>
-        </section>
-        </main>
-        <footer>
+            <div class = "foot">
             <p> @c Lavkush Nishad | All Right Reservedd </p>
+            </div>
         </footer>
 </body>
 

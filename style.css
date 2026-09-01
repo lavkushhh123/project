@@ -2,67 +2,104 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 768px) {
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+    }
+    .rightsection img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
+}
 
 body {
     background-color: rgb(12, 12, 37);
     color: white;
     font-family: Poppins, sans-serif;
-}
+}   
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
     display: flex;
     justify-content: space-around;                      /* lovkush porfolio vs nav ke beech space create krne k liye */
     align-items: center;
-    height: 90px;                                        /* nav ke height ko set krne k liye */
+    min-height: 80px;                                        /* nav ke height ko set krne k liye */
     background-color: rgb(24, 24, 71);
 }
-nav ul {
-    display: flex;
-    justify-content: center;
+.left{
+    font-size: 30px;
+    padding-left: 40px;
 }
-nav ul li a {
+.nav-links{
+    display: flex;
+    gap: 25px;  
+    list-style: none;  
+    padding: auto;
+    margin :40px;                                            /* nav ke items ke beech gap ko set krne k liye */
+}
+.nav-links li a {
     text-decoration: none;                   /* nav ke items ke under line ko remove krne k liye jaise home ke niche underline tha  */
     color: white;                              /* nav ke items ke color ko set krne k liye */
 }
-nav ul li a:hover {
-    color: rgb(217, 79, 217);                     /* nav ke items ke hover effect ke liye , mtlb jab hm uspar jaaye to link ka colour size n change ho ske */
-    font-size: 17px;                              /* jab hm uspar jaaye to link ka size n change ho ske */
-}
-nav ul li {
+.nav-links li a:hover {
+    color: rgb(108, 170, 220);                     /* nav ke items ke hover effect ke liye , mtlb jab hm uspar jaaye to link ka colour size n change ho ske */
+    /* font-size: 17px;                              /* jab hm uspar jaaye to link ka size n change ho ske */
+} */
+.nav ul li {
+    display: flex;
     list-style: none;                           /*list-style ko remove krne k liye jo bullets hote hain */
-    margin: 0 23px;                             /* nav ke items ke beech space create krne k liye jaise home contact ke beech*/
+    justify-content: space-around;
+
 }
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:25px ;
+    list-style: none;
+    padding-bottom: 20px;
+}
+ 
 main hr {                                        /* main ke under jo hr ka style set krne k liye i.e 1st horz line */
     border : 0 ;
-    background : #9c97f1;
+    /* background : #9c97f1; */
     height : 1px ;
     margin : 40px 84px; 
 }
+      /*  lavkush portfolio's */
 .left{ 
-    font-size: 25px ;                           /* nav ke left side ke text ka size set krne k liye */
+    font-size: clamp(1rem ,3vw , 2rem);
+    padding: auto;
 }
 .firstsection {
-    display: flex;
+     display: flex;
     justify-content: space-around;
     height: 23px 0;                                 /* first section ke height ko set krne k liye */
-    margin : 80px 0;
-    align-items: center;
+    /* margin : 80px 0;
+    align-items: center;*/ 
 }
 .firstsection {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    min-height: 80vh;
-    padding: 40px 9%;
-
-    position: relative;
+    max-height: 90%;
+    height: auto;
+    margin: auto;
     overflow: hidden;
 }
 
 
 /* LEFT SECTION */
 
-.firstsection > div {
+.home > div {
     width: 35%;
 }
 
@@ -79,24 +116,22 @@ main hr {                                        /* main ke under jo hr ka style
 /* for font style */
 .cool-look {
   font-family: "Space Grotesk", sans-serif;
-  font-weight: 800;
+  font-weight: 200;
   height:auto;
   letter-spacing: -1px;
-}
 
+}
 
 /* LAVKUSH COLOR */
 
-.purple {
-    color: #ff4fd8;
-
-    text-shadow:
-        0 0 1.5px #ff4fd8,
-        0 0 1.5px #ff4fd8;
-}
-
 
 /* RIGHT SECTION */
+#home {
+    min-height: 100vh;
+    padding-top: 200px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
 
 .rightsection {
     display: flex;
@@ -104,27 +139,16 @@ main hr {                                        /* main ke under jo hr ka style
     align-items: center;
 
     position: relative;
-    z-index: 2;
 }
 
 .rightsection img {
-    width: 100%;
-    max-width: 600px;
-    border: 1px solid cyan;
-   /* filter:
-        drop-shadow(0 0 0px cyan)
-        drop-shadow(0 0 0px rgba(59, 156, 156, 0.4));*/
-
-    transition: 0.4s;
+    /* width: 100%;
+    max-width: 600px; */
+    max-width: 60%;
+    height:auto ;
+    margin-top: 40px;
 }
 
-.rightsection img:hover {
-    transform: scale(1.05);
-
-    filter:
-        drop-shadow(0 0 0px cyan)
-        drop-shadow(0 0 0px cyan);
-}
 
 
 /* BUTTONS */
@@ -153,68 +177,18 @@ main hr {                                        /* main ke under jo hr ka style
 }
 
 .buttons button:hover {
-    background: cyan;
-    color: #0c0c25;
-
-    box-shadow:
-        0 0 10px cyan,
-        0 0 25px cyan;
+    color:blue;
 }
 
 
 /* BACKGROUND GLOW */
 
-/*.firstsection::before {
-    content: "";
 
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    background: cyan;
-
-    border-radius: 50%;
-
-    filter: blur(150px);
-
-    opacity: 0.12;
-
-    top: 10%;
-    right: 5%;
-}
-
-.firstsection::after {
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    background: #ff00cc;
-
-    border-radius: 50%;
-
-    filter: blur(140px);
-
-    opacity: 0.10;
-
-    bottom: 5%;
-    left: 5%;
-} */
 .rightsection img{
-    width : 600px;
-    min-height: 400px;
-    margin : 40px 0px;
-    border-radius: 10%;
-    border-style: dashed;
-    border-color: aqua;
-    border: 2px dashed cyan;
-box-shadow:
-    0 0 5px cyan,
-    0 0 10px cyan,
-    0 0 20px cyan;
+    border: 1px solid cyan;
+    border-radius: 40%;
+    max-width: 100%;
+    height: 300px;
 }
 .purple{
     color : rgb(217, 79, 217)
@@ -223,19 +197,40 @@ box-shadow:
     color: #9c97f1;
 }
 #about {
-    padding : 40px 20px ;
+    padding : 10px 20px ;
     text-align: center;
 }
-#about h2 {
-    text-align: center;
+#about h2{
+    font-size: 1.9rem;
     margin-bottom: 20px;
 }
-#about h3 {
-   /* text-align: center;
-    margin-bottom: 10px;
-    margin-top: 20px;*/
-    margin-top: 25px;
-    margin-bottom: 15px;
+.about-intro{
+    color : white ;
+    margin-top: 30px;     /* about aur hobbies ke beech ka gap*/ 
+    margin-bottom: 25px;
+}
+.hobbies-box{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    justify-content: center;       /* hobbies dabbe me center kiya*/
+    flex-wrap: wrap;
+}
+.hobbies{                            /*specific container*/
+    width: 180px;
+    padding:10px ;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    /* box-shadow: 0 0 10px rgb(61, 61, 79);     glow of the boxes */
+}
+.hobbies h4{
+    margin-bottom: 7px;
+}
+.hobbies p{
+    color: rgb(181, 180, 180);
+    font-size: 14px;
+    line-height: 1;
 }
 #about p {
     max-width: 800px;
@@ -243,111 +238,66 @@ box-shadow:
     /*text-align: center;*/
     line-height: 1.6;
 }
-.box{                   /*hobbies box*/
+.box{ 
+    display: flex;                  /*hobbies box*/
     list-style: none;
-    padding: 15px;
+    padding: 5%;
     margin: auto;
+    width: 90%;
     max-width: 500px;
-
-    border: 1px solid cyan;
-    border-radius: 10px;
-
-
-    box-shadow: 0 0 8px rgba(0,255,255,0.4);
 }
 .box li {
-    padding : 35px;     /* hobby items*/
+    padding : 5%;     /* hobby items*/
 }
 .box li :hover {
     color: cyan;
 }
-.box1 {
-    border: 1.8px solid rgb(170, 36, 99); 
-    border-radius: 15px;    /* hobbies item ko alag alag box style dene ke liye*/
-    padding: 0 0px;
-    margin: 0 155px;
- }
- .box1 :hover {
-    color: rgb(222, 38, 124); ;
- }
- .box2 {
-    border: 1.8px solid rgb(170, 36, 99); 
-    border-radius: 15px;    /* hobbies item ko alag alag box style dene ke liye*/
-    padding: 0px opx;
-    margin: 10px 150px;
- }
-.box3 {
-    border: 1.8px solid rgb(170, 36, 99); 
-    border-radius: 15px;    /* hobbies item ko alag alag box style dene ke liye*/
-    padding: 0px opx;
-    margin: 10px 150px;
- }
- .box4 {
-    border: 1.8px solid rgb(170, 36, 99); 
-    border-radius: 15px;    /* hobbies item ko alag alag box style dene ke liye*/
-    padding: 0px opx;
-    margin: 10px 130px;
- }
- 
- /*#projects  h2{
+
+ #projects{
+    padding: 10px 20px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.projects{
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-} */
- #projects {
-    padding: 40px 20px;     /* project section ke andar space*/
  }
-  #projects h2{                 /* project heading center me aayegi*/
-    text-align: center; 
-    margin: 30px;                   /* heading ke neeche space*/
- }
- .projects {
+#projects h2{
     display: flex;
-     align-items: center;          /*  vertical center */
-     padding: 15px;                      /*card ke andar space*/
-     max-width: 700px;
-     border-radius: 10px;
-     border: 1px solid rgba(0,255,255,0.4);
-     background: 0 0 8px rgba(255, 255 , 255 , 0.03);    /* drak tansparent background*/
-     box-shadow: 0 0 8px rgba(0, 255 , 255 , 0.2); ;      /* thoda cyan glow*/
-     transition: 0.3s;
-    }
-    .projects img {
-        width: 150px;
-        height: 100px;
-        object-fit: cover;         /* img ko property fit krega*/
-        border-radius: 8px;
-        margin-right: 20px;         /* img aur text ke beech space*/
-    }
-    .project-info h3{
-        margin-bottom: 8px;      /* project name*/
-        color: cyan;
-    } 
-    .project:hover{
-        transform : translateX(5px);             /* thoda right move*/
-        box-shadow:0 0 15px rgba(0, 255, 255, 0.4) ;      /* gllow thoda increase karega*/ 
-    }  
-    #contact {
-        padding : 50px 20px ;         /*contact section ke andar space*/
-        text-align: center;
-    }
+    justify-content: center;
+}
+#projects h2{
+    font-size: 1.8rem;
+    margin-bottom: 30px;       /* heading aur cards ke beech space*/
+}
+.project-container{                 /*saare project card ke container*/
+    display: flex;
+    justify-content: center;                    /* cards ko horz center me rkhega*/                       /*cards ki height ko properly adjust krega*/
+    gap: 30px;                                      /*dabbo ke beech gap*/
+    flex-wrap: wrap;                                /* space km hone pr nextline*/
+}
+.project-card{
+   width: 180px;
+   padding: 10px;
+   border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03); 
+} 
+.project-card h3{
+    margin-bottom: 8px;
+    font-size:1rem;
+    font-weight: 8px;
+}
+.project-card p{
+    /* color : rgb(251, 244, 244) ;
+    line-height: 1.2; */
+
+}
     #contact h2{
         margin-bottom: 30px;   /*space below heading*/
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
     #contact form{
         max-width: 500px;      /* fom ki max width*/
         margin: auto;          /*form ko cemter me rkhega*/
         padding : 25px;         /*form ke andar space*/
-        border: 1px solid cyan;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.03)    /* for dark backkground */
+        justify-content: center;
     }
 
     #contact input , 
@@ -355,10 +305,10 @@ box-shadow:
         width : 100%;                 /*ip width*/
         padding: 12px;                  /* b0x ke andar space*/
         margin-bottom: 15px;         /*neechge gsp*/
-        border: 1px solid rgb(217, 79, 217);
-        border-radius: 6px;
-        background: #0c0c25;
-        color: white ;
+        border: 1px white solid;          /* box ke border ka color*/
+        border-radius: 2px;
+        background:transparent;
+        color:white;                 /* text ka color*/;
         box-sizing: border-box;       /* box size ko proper rakhta hai*/
         font-size: 15px;
     }
@@ -366,55 +316,37 @@ box-shadow:
     #contact textarea{          /* mesage box kim height*/
         height: 120px;
         resize: vertical;                   /* to resize vertical*/
-        box-shadow: 0 0 6px cyan;
         outline : none ;
     }
 
-    #contact button {
+    #contact button  {
         padding: 10px 20px;
-        border: 2px solid rgb(14, 220, 113);
-        border-radius: 20px;
-        background: transparent;       /*color of button*/
-        color: white;
+        color: black;
+        font-weight: 800;
+        border: 1px solid white;
+        border-radius: 20px;       /*color of button*/
+        color: rgb(12, 12, 12);
         cursor: pointer;                 /*hath wala pointer*/
-        box-shadow: rgb(14, 220, 113);
+        box-shadow:white;
         transition: 0.3s;                /* small hover */
 
+        }
+        #contact p{                 /*send message ko center me rkhega*/
+            text-align: center;
         }
 
         /* button hover */
 #contact button:hover {
-            background: cyan;
-            color: #0c0c25;
-            box-shadow: 0 0 15px cyan;
+            color: rgb(14, 14, 195);
         }
-
-.contact-info{
-    margin-top: 30px;                /* space btw form and contact detail*/
-}
-
-/* contact link */
-.contact-info a {
-    color: #aaa;                /* white color of link*/
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-/* link hover */
-
-.contact-info a:hover{
-    color: #09c642;
-}
-
-
 #skills{
-    padding: 50px 20px;     /* skill section ke andar space*/
-    text-align: center;
-    color: #ff4fd8;
+    padding:10px 20px;     /* skill section ke andar space*/
+    text-align:center;
+    /* color: #ff4fd8; */
 }
 #skills h{
     font-size: 1.9rem;
-    margin-bottom: 10px;   /* neeche space*/
+    margin-bottom: 30px;   /* neeche space*/
 }
 .skill-intro{
     color : white ;
@@ -431,12 +363,12 @@ box-shadow:
 /* individual skill card */
 .skill-card{
     width: 180px;
-    padding: 20px;
-    border:1px solid rgba(0, 255, 255, 0.4) ;
+    padding: 10px;
+    /* border:1px solid rgba(0, 255, 255, 0.4) ; */
     border-radius: 12px;
     background:rgba(255, 255, 255, 0.03) ;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2) ;     /* glow of the boxes*/
-    transition: 0.3s;
+    /* box-shadow: 0 0 blue;     glow of the boxes */
+    /* transition: 0.3s; */
 }
 
 .skill-card img{
@@ -444,7 +376,7 @@ box-shadow:
     margin-bottom: 10px;
 }
 .skill-card h3{
-    color: rgb(49, 221, 109);
+   
     margin-bottom: 6px;
 }
 .skill-card p{
@@ -455,15 +387,45 @@ box-shadow:
 
 /* card hover effect */
 .skill-card:hover{
-    transform:translateY(-5px);                   /* jab arrow jaaye to thoda upar ho*/
-    box-shadow:  0 0 15px rgba(0, 255, 255, 0.4);
+    /* transform:translateY(-5px);                   jab arrow jaaye to thoda upar ho */
+    /* box-shadow:  0 0 15px rgba(0, 255, 255, 0.4); */
 }
-footer{
-    background-color: rgb(7, 7, 29);
-    height: 240px;
-    padding: 15 px;
+.contact-info{
+    margin-top: 25px;                /* space btw form and contact detail*/
     display: flex;
+    gap: 20px;                        /* contact detail ke beech gap*/
+    align-items: center;
+    justify-content: center;
+    padding : 10px 0px;  
+    flex-wrap: wrap;                /* screen chhoti hone pr next line */
+}
+
+/* contact link */
+.contact-info a {
+    color:white;                   /* white color of link*/
+    text-decoration: none;
+    transition: 0.3s;
+}
+.contact-info a:hover{
+    color: rgb(79, 79, 215);                /* hover effect of link*/
+}
+
+#footer{
+    background-color: rgb(7, 7, 29);
+    height: 50px;
+    justify-content: center;
     text-align: center;
     justify-content: center;
     align-items: center ;
+}
+.foot{
+    background-color: rgb(7, 7, 29);
+    justify-content: center;
+    text-align: center;
+    align-items: center ;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    color: rgb(231, 222, 222);
+    
 }
